@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SubjectManagementComponent } from './subject-management/subject-management.component';
+import { LoginComponent } from './user-auth/login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent, // Ensure this is declared
+    AppComponent,
     SubjectManagementComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserModule, // Ensure BrowserModule is imported
-    FormsModule, // Ensure FormsModule is imported for two-way data binding
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent], // Ensure AppComponent is listed here
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
